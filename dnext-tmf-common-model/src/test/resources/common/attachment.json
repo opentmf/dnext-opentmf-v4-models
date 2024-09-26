@@ -1,0 +1,22 @@
+{
+  "id": "305f2215715f",
+  "href": "http://host/Attachment/305f2215715f",
+  "attachmentType": "PDF",
+  "description": "Fiber Optic Cable Data Sheet",
+  "mimeType": "application/pdf",
+  "name": "FAA-Compliant_Loose_Tube_Cable_-_Double_Jacket.pdf",
+  "url": "http://host/Content/d08d1967b82f",
+  "size": {
+    "amount": 12,
+    "units": "KB"
+  },
+  "validFor": {
+    "startDateTime": "2021-07-19T16:01:18.863Z",
+    "endDateTime": "2025-07-19T16:01:18.863Z"
+  },
+  "@referredType": "ReferredType",
+  "createdBy": "Created By",
+  "createdDate": "2021-07-19T16:01:18.863Z",
+  "updatedBy": "Updated By",
+  "updatedDate": "2021-07-19T16:01:18.863"
+}

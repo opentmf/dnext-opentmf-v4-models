@@ -1,0 +1,89 @@
+{
+  "revision": 0,
+  "createdDate": "2024-04-29T08:00:59.712Z",
+  "updatedDate": "2024-04-29T08:00:59.712Z",
+  "createdBy": "michael.jackson@pia-team.com",
+  "updatedBy": "michael.jackson@pia-team.com",
+  "paymentPlan": [],
+  "id": "344a541d-8bb5-4f02-a68e-c3058d8aede6",
+  "href": "/tmf-api/accountManagement/v4/billingAccount/344a541d-8bb5-4f02-a68e-c3058d8aede6",
+  "accountType": "organization",
+  "description": "",
+  "name": "Isra Ragehb",
+  "state": "Active",
+  "paymentStatus": "N/A",
+  "accountBalance": [],
+  "accountRelationship": [],
+  "attachment": [],
+  "characteristic": [],
+  "contact": [],
+  "relatedParty": [
+    {
+      "id": "VFUK",
+      "href": "/tmf-api/party/v4/organization/VFUK",
+      "name": "Vodafone UK",
+      "role": "operator",
+      "@baseType": "RelatedParty",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/relatedparty.json",
+      "@type": "RelatedParty",
+      "@referredType": "Organization"
+    },
+    {
+      "id": "C1108323",
+      "href": "/tmf-api/customerManagement/v4/customer/C1108323",
+      "name": "Isra Ragehb",
+      "role": "customer",
+      "@baseType": "RelatedParty",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/relatedparty.json",
+      "@type": "RelatedParty",
+      "@referredType": "Customer"
+    }
+  ],
+  "taxExemption": [],
+  "@baseType": "BillingAccount",
+  "@schemaLocation": "/tmf-api/accountManagement/v4/schema/billingaccount.json",
+  "externalReference": [
+    {
+      "id": "ewe",
+      "name": "customerFraudAnomalousWindow",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    },
+    {
+      "id": "ewe",
+      "name": "customerFraudAnomalousPercentageIncrease",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    },
+    {
+      "id": "wewe",
+      "name": "customerSupportTier",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    },
+    {
+      "id": "wrwr",
+      "name": "customerFraudThreshold",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    },
+    {
+      "id": "rw",
+      "name": "vfKenanBAR",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    },
+    {
+      "id": "test",
+      "name": "vfKenanBAN",
+      "@baseType": "ExternalReference",
+      "@schemaLocation": "/tmf-api/accountManagement/v4/schema/externalreference.json",
+      "@type": "ExternalReference"
+    }
+  ]
+}

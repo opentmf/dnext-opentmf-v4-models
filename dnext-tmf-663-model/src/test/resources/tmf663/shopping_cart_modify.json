@@ -1,0 +1,169 @@
+{
+  "revision": 0,
+  "createdDate": "2022-11-14T07:42:21.452Z",
+  "updatedDate": "2022-11-14T07:42:21.452Z",
+  "createdBy": "Anonymous",
+  "updatedBy": "Anonymous",
+  "id": "cc3364c0-5ec2-4945-a6df-00c09365edfa",
+  "href": "/tmf-api/shoppingCart/v4/shoppingCart/cc3364c0-5ec2-4945-a6df-00c09365edfa",
+  "@type": "ShoppingCart",
+  "@baseType": "ShoppingCart",
+  "@schemaLocation": "/tmf-api/shoppingCart/v4/schema/shoppingcart.json",
+  "shoppingCartCharacteristic": [
+    {
+      "name": "eventType",
+      "value": "productChange"
+    },
+    {
+      "name": "subEventType",
+      "value": "product.modifyCharacteristics"
+    }
+  ],
+  "cartItem": [
+    {
+      "id": "26bcec8c",
+      "quantity": 1,
+      "action": "modify",
+      "cartItemCharacteristic": [         {
+            "name": "cart_characteristic_a_name",
+            "value": "a value"
+          }
+	  ],
+      "cartItemRelationship": [
+      ],
+      "itemPrice": [
+        {
+          "name": "CW Price",
+          "priceType": "Cost",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "taxIncludedAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "@baseType": "Price",
+            "@type": "Price"
+          }
+        }
+      ],
+      "itemTerm": [
+        {}
+      ],
+      "product": {
+        "id": "100",
+        "href": "/tmf-api/productInventory/v4/product/100",
+        "description": "UC DigitalLine License Entry Offering",
+        "isBundle": false,
+        "name": "Office License - Entry Edition",
+        "orderDate": "2022-11-14T07:42:21.376Z",
+        "productCharacteristic": [
+          {
+            "name": "currency",
+            "value": "EUR"
+          },
+          {
+            "name": "licenseQuantity",
+            "value": "10"
+          },
+          {
+            "name": "licenseSKU",
+            "value": "LC_DL-UNL_50"
+          },
+          {
+            "name": "licenseVendor",
+            "value": "RingCentral"
+          },
+          {
+            "name": "primaryContactFirstName",
+            "value": "Gökhan"
+          },
+          {
+            "name": "primaryContactLastName",
+            "value": "Demir"
+          },
+          {
+            "name": "primaryContactEmail",
+            "value": "demir.gokhan@pia-team.com"
+          },
+          {
+            "name": "primaryContactMobile",
+            "value": "+905326850084"
+          },
+          {
+            "name": "sendWelcomeEmail",
+            "value": "True"
+          },
+          {
+            "name": "oppId",
+            "value": "123"
+          },
+          {
+            "name": "Support System ID",
+            "value": "03"
+          }
+        ],
+        "productSpecification": {
+          "id": "UCDigitalLineLicenseSpecification",
+          "href": "http://dpc-api-svc/tmf-api/productCatalogManagement/v4/productSpecification/UCDigitalLineLicenseSpecification",
+          "name": "UCDigitalLineLicenseSpecification"
+        },
+        "productTerm": [
+          {}
+        ],
+        "relatedParty": [
+          {
+            "id": "C1060843",
+            "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+            "name": "Gokhan Test_03",
+            "role": "Customer",
+            "@referredType": "Customer"
+          },
+          {
+            "id": "1aa7b726",
+            "href": "https://dnext.pia-team.com/sales-ui",
+            "name": "gokhan demir",
+            "role": "Customer",
+            "@referredType": "loggedInUser"
+          }
+        ]
+      },
+      "productOffering": {
+        "id": "UCDigitalLineLicenseEntryOffering",
+        "href": "/tmf-api/productCatalogManagement/v4/productOffering/UCDigitalLineLicenseEntryOffering",
+        "name": "Office License - Entry Edition"
+      },
+      "status": "active"
+    }
+  ],
+  "status": "active",
+  "relatedParty": [
+    {
+      "id": "C1060843",
+      "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+      "name": "Gokhan Test_03",
+      "role": "customer",
+      "@referredType": "Customer"
+    },
+    {
+      "id": "VFIE",
+      "href": "/tmf-api/party/v4/organization/VFIE",
+      "name": "Vodafone Ireland",
+      "role": "operator",
+      "@referredType": "Organization"
+    },
+    {
+      "id": "abe03aec",
+      "href": "https://dnext.pia-team.com/sales-ui",
+      "name": "gokhan demir",
+      "role": "Customer",
+      "@referredType": "loggedInUser"
+    }
+  ],
+  "validFor": {
+    "endDateTime": "2022-12-14T07:42:21.451Z",
+    "startDateTime": "2022-11-14T07:42:21.451Z"
+  }
+}

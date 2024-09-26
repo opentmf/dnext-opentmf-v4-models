@@ -1,0 +1,120 @@
+{
+  "id": "PCRAzurePlanProductSpec",
+  "href": "/tmf-api/productCatalogManagement/v4/productSpecification/PCRAzurePlanProductSpec",
+  "revision": 0,
+  "name": "PCR Azure Plan Product Spec",
+  "description": "PCR Azure Plan Product Spec",
+  "lifecycleStatus": "Launched",
+  "createdBy": "pablofrancisco.garcia@pia-team.com",
+  "updatedBy": "pablofrancisco.garcia@pia-team.com",
+  "createdDate":"2022-11-30T07:47:21.829Z",
+  "updatedDate":"2022-11-30T07:47:21.829Z",  
+  "productSpecCharacteristic": [
+    {
+      "name": "cspPartnerDomainName",
+      "description": "CSP Partner Domain Name.",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 1,
+      "maxCardinality": 1,
+      "extensible": false,
+      "id": "cspPartnerDomainName",
+      "mandatory": true,
+      "isUnique": false,
+      "isVisible": true
+    },
+    {
+      "name": "customerDomainName",
+      "description": "Customer Domain Name.",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 1,
+      "maxCardinality": 1,
+      "extensible": false,
+      "id": "customerDomainName",
+      "mandatory": true,
+      "isUnique": false,
+      "isVisible": true
+    },
+    {
+      "name": "cspPartnerId",
+      "description": "CSP Partner Id",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 1,
+      "maxCardinality": 1,
+      "extensible": false,
+      "id": "cspPartnerId",
+      "mandatory": true,
+      "isUnique": false,
+      "isVisible": true
+    },
+    {
+      "name": "azurePlanSubscriptionId",
+      "description": "Azure Plan Subscription Id",
+      "valueType": "string",
+      "configurable": false,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "extensible": false,
+      "id": "azurePlanSubscriptionId",
+      "mandatory": true,
+      "isUnique": false,
+      "isVisible": false
+    }
+  ],
+  "pExtension": {
+	"fulfillmentSpecification": {
+		 "add": "addSpecification",
+         "modify":"modifySpecification",
+         "modify.Migration":"modify.MigrationSpec",
+         "modify.Relocation":"modifySpec",
+         "modify.Takeover":"modifySpec",
+         "delete":"deleteSpec",
+         "statusChange":"statusChange",
+         "statusChange.Suspend":"statusChange",
+         "statusChange.Resume":"statusChange",
+          "postFlow": {
+    	    "add": "addSpecification",
+            "modify":"modifySpecification",
+            "modify.Migration":"modify.MigrationSpec",
+            "modify.Relocation":"modifySpec",
+            "modify.Takeover":"modifySpec",
+            "delete":"deleteSpec",
+            "statusChange":"statusChange",
+            "statusChange.Suspend":"statusChange",
+            "statusChange.Resume":"statusChange"  
+		  },
+          "preFlow":{
+    		 "add": "addSpecification",
+             "modify":"modifySpecification",
+             "modify.Migration":"modify.MigrationSpec",
+             "modify.Relocation":"modifySpec",
+             "modify.Takeover":"modifySpec",
+             "delete":"deleteSpec",
+             "statusChange":"statusChange",
+             "statusChange.Suspend":"statusChange",
+             "statusChange.Resume":"statusChange"
+		  }
+	},
+    "fulfillmentSpecificationOperation": [
+      {
+        "operationType": "add",
+        "preFlow": "PCRAzurePlan_Add",
+        "postFlow": "PCRAzurePlan_Post_Add",
+        "cancelFlow": "cancelFlow",
+        "relatedSpecifications": [
+          {
+            "relation": "myrelation",
+            "specification": {
+              "id": "relatedSpecId"
+            }
+          }
+        ],
+        "isBypassInventoryTasks": true
+      }
+    ]
+  },
+  "@schemaLocation": "/tmf-api/productCatalogManagement/v4/schema/productspecification.json",
+  "isBundle": false
+}

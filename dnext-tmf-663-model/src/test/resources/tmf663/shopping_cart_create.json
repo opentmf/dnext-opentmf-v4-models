@@ -1,0 +1,403 @@
+{
+  "@type": "ShoppingCart",
+  "@baseType": "ShoppingCart",
+  "@schemaLocation": "/tmf-api/shoppingCart/v4/schema/shoppingcart.json",
+  "shoppingCartCharacteristic": [
+    {
+      "name": "eventType",
+      "value": "newSubscription"
+    }
+  ],
+  "cartItem": [
+    {
+      "id": "ac38fbcb",
+      "quantity": 1,
+      "action": "add",
+      "cartItemCharacteristic": [         {
+            "name": "cart_characteristic_a_name",
+            "value": "a value"
+          }
+	  ],
+      "cartItemRelationship": [
+        {
+          "id": "26bcec8c",
+          "relationshipType": "bundles",
+          "@type": "productOfferingRelationship"
+        },
+        {
+          "id": "632eca84",
+          "relationshipType": "bundles",
+          "@type": "productOfferingRelationship"
+        }
+      ],
+      "itemPrice": [
+        {
+          "name": "CW Price",
+          "priceType": "Cost",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "taxIncludedAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "@baseType": "Price",
+            "@type": "Price"
+          }
+        }
+      ],
+      "itemTerm": [
+        {}
+      ],
+      "product": {
+        "id": "UCRingCentralOfficeLicenseEntryEdition",
+        "description": "Vodafone Business UC - Entry Edition",
+        "isBundle": true,
+        "name": "Vodafone Business UC - Entry Edition",
+        "orderDate": "2022-11-14T07:42:21.376Z",
+        "productTerm": [
+          {}
+        ],
+        "relatedParty": [
+          {
+            "id": "C1060843",
+            "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+            "name": "Gokhan Test_03",
+            "role": "Customer",
+            "@referredType": "Customer"
+          },
+          {
+            "id": "1e3789ef",
+            "href": "https://dnext.pia-team.com/sales-ui",
+            "name": "gokhan demir",
+            "role": "Customer",
+            "@referredType": "loggedInUser"
+          }
+        ]
+      },
+      "productOffering": {
+        "id": "UCRingCentralOfficeLicenseEntryEdition",
+        "href": "/tmf-api/productCatalogManagement/v4/productOffering/UCRingCentralOfficeLicenseEntryEdition",
+        "name": "Vodafone Business UC - Entry Edition"
+      },
+      "status": "active"
+    },
+    {
+      "id": "26bcec8c",
+      "quantity": 1,
+      "action": "add",
+      "cartItemCharacteristic": [         {
+            "name": "cart_characteristic_a_name",
+            "value": "a value"
+          }
+	  ],
+      "cartItemRelationship": [
+        {
+          "id": "ac38fbcb",
+          "relationshipType": "mandatoryOf",
+          "@type": "productOfferingRelationship"
+        }
+      ],
+      "itemPrice": [
+        {
+          "name": "CW Price",
+          "priceType": "Cost",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "taxIncludedAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "@baseType": "Price",
+            "@type": "Price"
+          }
+        }
+      ],
+      "itemTerm": [
+        {}
+      ],
+      "product": {
+        "id": "UCDigitalLineLicenseEntryOffering",
+        "description": "UC DigitalLine License Entry Offering",
+        "isBundle": false,
+        "name": "Office License - Entry Edition",
+        "orderDate": "2022-11-14T07:42:21.376Z",
+        "productCharacteristic": [
+          {
+            "name": "currency",
+            "value": "EUR"
+          },
+          {
+            "name": "licenseQuantity",
+            "value": "10"
+          },
+          {
+            "name": "licenseSKU",
+            "value": "LC_DL-UNL_50"
+          },
+          {
+            "name": "licenseVendor",
+            "value": "RingCentral"
+          },
+          {
+            "name": "primaryContactFirstName",
+            "value": "Gökhan"
+          },
+          {
+            "name": "primaryContactLastName",
+            "value": "Demir"
+          },
+          {
+            "name": "primaryContactEmail",
+            "value": "demir.gokhan@pia-team.com"
+          },
+          {
+            "name": "primaryContactMobile",
+            "value": "+905326850084"
+          },
+          {
+            "name": "sendWelcomeEmail",
+            "value": "True"
+          },
+          {
+            "name": "oppId",
+            "value": "123"
+          },
+          {
+            "name": "Support System ID",
+            "value": "03"
+          }
+        ],
+        "productSpecification": {
+          "id": "UCDigitalLineLicenseSpecification",
+          "href": "http://dpc-api-svc/tmf-api/productCatalogManagement/v4/productSpecification/UCDigitalLineLicenseSpecification",
+          "name": "UCDigitalLineLicenseSpecification"
+        },
+        "productTerm": [
+          {}
+        ],
+        "relatedParty": [
+          {
+            "id": "C1060843",
+            "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+            "name": "Gokhan Test_03",
+            "role": "Customer",
+            "@referredType": "Customer"
+          },
+          {
+            "id": "1aa7b726",
+            "href": "https://dnext.pia-team.com/sales-ui",
+            "name": "gokhan demir",
+            "role": "Customer",
+            "@referredType": "loggedInUser"
+          }
+        ]
+      },
+      "productOffering": {
+        "id": "UCDigitalLineLicenseEntryOffering",
+        "href": "/tmf-api/productCatalogManagement/v4/productOffering/UCDigitalLineLicenseEntryOffering",
+        "name": "Office License - Entry Edition"
+      },
+      "status": "active"
+    },
+    {
+      "id": "632eca84",
+      "quantity": 1,
+      "action": "add",
+      "cartItemCharacteristic": [         {
+            "name": "cart_characteristic_a_name",
+            "value": "a value"
+          }
+	  ],
+      "cartItemRelationship": [
+        {
+          "id": "ac38fbcb",
+          "relationshipType": "mandatoryOf",
+          "@type": "productOfferingRelationship"
+        }
+      ],
+      "itemPrice": [
+        {
+          "name": "CW Price",
+          "priceType": "Cost",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "taxIncludedAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "@baseType": "Price",
+            "@type": "Price"
+          }
+        }
+      ],
+      "itemTerm": [
+        {}
+      ],
+      "product": {
+        "id": "UCMainNumberOffering",
+        "description": "UC Main Number Offering",
+        "isBundle": false,
+        "name": "Main Number",
+        "orderDate": "2022-11-14T07:42:21.376Z",
+        "productCharacteristic": [
+          {
+            "name": "siteName",
+            "value":"a"
+          }
+        ],
+        "productSpecification": {
+          "id": "UCMainNumberSpecification",
+          "href": "/tmf-api/productCatalogManagement/v4/productSpecification/UCMainNumberSpecification",
+          "name": "UCMainNumberSpecification"
+        },
+        "productTerm": [
+          {}
+        ],
+        "relatedParty": [
+          {
+            "id": "C1060843",
+            "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+            "name": "Gokhan Test_03",
+            "role": "Customer",
+            "@referredType": "Customer"
+          },
+          {
+            "id": "6456b6fe",
+            "href": "https://dnext.pia-team.com/sales-ui",
+            "name": "gokhan demir",
+            "role": "Customer",
+            "@referredType": "loggedInUser"
+          }
+        ]
+      },
+      "productOffering": {
+        "id": "UCMainNumberOffering",
+        "href": "/tmf-api/productCatalogManagement/v4/productOffering/UCMainNumberOffering",
+        "name": "Main Number"
+      },
+      "status": "active"
+    },
+    {
+      "id": "efcaa63a",
+      "quantity": 1,
+      "action": "add",
+      "cartItemCharacteristic": [         {
+            "name": "cart_characteristic_a_name",
+            "value": "a value"
+          }
+	  ],
+      "itemPrice": [
+        {
+          "name": "CW Price",
+          "priceType": "Cost",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "taxIncludedAmount": {
+              "unit": "USD",
+              "value": 10.0
+            },
+            "@baseType": "Price",
+            "@type": "Price"
+          }
+        }
+      ],
+      "itemTerm": [
+        {}
+      ],
+      "product": {
+        "description": "PSTNGeoNumberOffering",
+        "isBundle": false,
+        "name": "PSTN Geo Number",
+        "orderDate": "2022-11-28T12:51:01.469Z",
+        "productCharacteristic": [
+          {
+            "name": "siteName",
+            "value": "Site 1"
+          },
+          {
+            "name": "serviceProviderName",
+            "value": "TATA"
+          },
+          {
+            "name": "isPortIn",
+            "value": "True"
+          },
+          {
+            "name": "numberCount",
+            "value": "10"
+          }
+        ],
+        "productSpecification": {
+          "id": "UCPSTNGeoNumberSpecification",
+          "href": "/tmf-api/productCatalogManagement/v4/productSpecification/UCPSTNGeoNumberSpecification",
+          "name": "UCPSTNGeoNumberSpecification"
+        },
+        "productTerm": [
+          {}
+        ],
+        "relatedParty": [
+          {
+            "id": "C1060843",
+            "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+            "name": "Gokhan Test_03",
+            "role": "customer",
+            "@referredType": "Customer"
+          },
+          {
+            "id": "VFIE",
+            "href": "/tmf-api/party/v4/organization/VFIE",
+            "name": "Vodafone Ireland",
+            "role": "operator",
+            "@referredType": "Organization"
+          }
+        ]
+      },
+      "productOffering": {
+        "id": "PSTNGeoNumberOffering",
+        "href": "/tmf-api/productCatalogManagement/v4/productOffering/PSTNGeoNumberOffering",
+        "name": "PSTN Geo Number"
+      },
+      "status": "active"
+    }
+  ],
+  "status": "active",
+  "relatedParty": [
+    {
+      "id": "C1060843",
+      "href": "/tmf-api/customerManagement/v4/customer/C1060843",
+      "name": "Gokhan Test_03",
+      "role": "customer",
+      "@referredType": "Customer"
+    },
+    {
+      "id": "VFIE",
+      "href": "/tmf-api/party/v4/organization/VFIE",
+      "name": "Vodafone Ireland",
+      "role": "operator",
+      "@referredType": "Organization"
+    },
+    {
+      "id": "abe03aec",
+      "href": "https://dnext.pia-team.com/sales-ui",
+      "name": "gokhan demir",
+      "role": "Customer",
+      "@referredType": "loggedInUser"
+    }
+  ],
+  "validFor": {
+    "endDateTime": "2022-12-14T07:42:21.451Z",
+    "startDateTime": "2022-11-14T07:42:21.451Z"
+  }
+}

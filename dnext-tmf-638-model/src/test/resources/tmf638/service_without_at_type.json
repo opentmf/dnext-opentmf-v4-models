@@ -1,0 +1,56 @@
+{
+  "id": "1",
+  "createdBy": "a",
+  "name": "GSIPGeoNumberSS",
+  "description": "GSIPGeoNumberSS",
+  "state": "active",
+  "startMode": "1",
+  "serviceSpecification": {
+    "@type": "ServiceSpecification",
+    "id": "GSIPGeoNumberSS",
+    "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/GSIPGeoNumberSS",
+    "name": "GSIPGeoNumberSS"
+  },
+  "place": [
+    {
+      "country": "GB",
+      "stateOrProvince": "LondonGreatArea",
+      "city": "Brighton",
+      "postcode": "BN1 4RU",
+      "streetName": "Trafalgae Place",
+      "streetNr": "3",
+      "geographicSubAddress": [
+        {
+          "@type": "GeographicSubAddress",
+          "buildingName": "Lanchester House"
+        }
+      ],
+      "role": "Service Place",
+      "@type": "GeographicAddress"
+    }
+  ],
+  "serviceCharacteristic": [
+    {
+      "name": "digicomOrderId",
+      "value": "123456"
+    }
+  ],
+  "supportingResource": [
+    {
+      "id": "1",
+      "href": "https://href.com/id",
+      "name": "telephoneNumber-1",
+      "@baseType": "ResourceSpecification",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+      "@type": "ResourceSpecification"
+    },
+    {
+      "id": "2",
+      "href": "https://href.com/id",
+      "name": "telephoneNumber-N",
+      "@baseType": "ResourceSpecification",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecification.schema.json",
+      "@type": "ResourceSpecification"
+    }
+  ]
+}

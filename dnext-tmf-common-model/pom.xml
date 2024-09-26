@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.pia.commons</groupId>
     <artifactId>dnext-tmf-v4-models</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>dnext-tmf-common-model</artifactId>
-  <version>4.1.0.0</version>
+  <version>4.1.0.1-SNAPSHOT</version>
 
   <dependencies>
     <dependency>

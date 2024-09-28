@@ -13,6 +13,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 import com.pia.dnext.v4.tmf641.config.DnextTmf641JacksonConfig;
 import com.pia.dnext.v4.tmf641.model.DnextCancelServiceOrder;
 import com.pia.dnext.v4.tmf641.model.DnextServiceOrder;
+import com.pia.dnext.v4.tmf641.model.DnextServiceOrderCreate;
 import com.pia.dnext.v4.tmf641.model.DnextServiceOrderItem;
 import com.pia.tmf.v4.tmf641.model.ServiceOrderCreate;
 import java.io.IOException;
@@ -43,6 +44,7 @@ class DnextTmf641ModelTests {
   static Stream<Arguments> ShSampleJsonAndCorrespondingClassList() {
     return Stream.of(
         arguments("service_order", DnextServiceOrder.class),
+        arguments("service_order_create", DnextServiceOrderCreate.class),
         arguments("cancel_service_order", DnextCancelServiceOrder.class),
         arguments("service_order_create", ServiceOrderCreate.class));
   }
@@ -66,8 +68,8 @@ class DnextTmf641ModelTests {
         var valid = stream("service_order_create")) {
       assertThrows(
           IllegalArgumentException.class, () -> streamToObject(invalid, ServiceOrderCreate.class));
-      var ServiceOrderCreate = streamToObject(valid, ServiceOrderCreate.class);
-      var item = ServiceOrderCreate.getServiceOrderItems().get(0);
+      var serviceOrderCreate = streamToObject(valid, ServiceOrderCreate.class);
+      var item = serviceOrderCreate.getServiceOrderItems().get(0);
       assertInstanceOf(DnextServiceOrderItem.class, item);
       assertEquals("statusChange.Suspend", item.getAction());
     }

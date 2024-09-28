@@ -6,11 +6,23 @@
   "requestedStartDate": "2020-08-27T09:37:40.508Z",
   "requestedCompletionDate": "2020-08-27T09:37:40.508Z",
   "@type": "ServiceOrder",
+  "orderCharacteristic": [
+    {
+      "name": "name",
+      "value": "value"
+    }
+  ],
   "serviceOrderItem": [
     {
       "id": "1",
       "action": "statusChange.Suspend",
       "@type": "ServiceOrderItem",
+      "orderItemCharacteristic": [
+        {
+          "name": "name",
+          "value": "value"
+        }
+      ],
       "service": {
         "serviceState": "active",
         "type": "CFS",

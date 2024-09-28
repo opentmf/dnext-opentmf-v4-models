@@ -23,3 +23,6 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ## Version History
 ### 1.0.0
 - Initial Version
+### 1.0.1
+- Starts Using new TMF-v4 Clients versions
+- Adds new classes to dnext-tmf-641-models

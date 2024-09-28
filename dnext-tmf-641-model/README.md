@@ -34,3 +34,6 @@ public class JacksonConfig {
 ## Version History
 ### 4.0.0.0
 - Initial version
+### 4.0.0.1
+- Adds DNextServiceOrderCreate
+- Adds orderItemCharacteristic to the DNextServiceOrderItem

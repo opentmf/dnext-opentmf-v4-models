@@ -8,10 +8,21 @@ This library is included from any Dnext extended tmf model classes. So, it shoul
 
 ### 1. Add Maven Dependency
 ```xml
+<dependencyManagement>
+  <dependency>
+    <groupId>com.pia.commons</groupId>
+    <artifactId>pia-commons-versions</artifactId>
+    <version>RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+</dependencyManagement>
+```
+#### Add dnext-tmf-common-v4-model Module
+```xml
 <dependency>
     <groupId>com.pia.commons</groupId>
-    <artifactId>dnext-tmf-common-model</artifactId>
-    <version>${version}</version>
+    <artifactId>dnext-tmf-common-v4-model</artifactId>
 </dependency>
 ```
 
@@ -35,3 +46,8 @@ public class JacksonConfig {
 ## Version History
 ### 4.1.0.0
 - Initial Version
+### 4.0.0.1
+- Depends on the recent TMF v4 model classes.
+### 4.0.0.2
+- Appends v4 into module names.
+- Depends on the recent TMF v4 model classes.

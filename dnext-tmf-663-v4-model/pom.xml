@@ -7,19 +7,23 @@
     <version>1.0.2-SNAPSHOT</version>
   </parent>
 
-  <artifactId>dnext-tmf-641-model</artifactId>
+  <artifactId>dnext-tmf-663-v4-model</artifactId>
   <version>4.1.0.2-SNAPSHOT</version>
+
+  <properties>
+    <tmf-663-v4-model.version>4.0.0.2</tmf-663-v4-model.version>
+  </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.pia.commons</groupId>
-      <artifactId>dnext-tmf-common-model</artifactId>
+      <artifactId>dnext-tmf-common-v4-model</artifactId>
       <version>4.1.0.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.pia.commons</groupId>
-      <artifactId>tmf-641-model</artifactId>
-      <version>4.1.0.1</version>
+      <artifactId>tmf-663-v4-model</artifactId>
+      <version>${tmf-663-v4-model.version}</version>
     </dependency>
   </dependencies>
 

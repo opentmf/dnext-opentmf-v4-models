@@ -7,10 +7,21 @@ In order to use this model library, and teach Jackson to consider the extended m
 
 ### 1. Add Maven Dependency
 ```xml
+<dependencyManagement>
+  <dependency>
+    <groupId>com.pia.commons</groupId>
+    <artifactId>pia-commons-versions</artifactId>
+    <version>RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+</dependencyManagement>
+```
+#### Add dnext-tmf-663-v4-model Module
+```xml
 <dependency>
     <groupId>com.pia.commons</groupId>
-    <artifactId>dnext-tmf-663-model</artifactId>
-    <version>${version}</version>
+    <artifactId>dnext-tmf-663-v4-model</artifactId>
 </dependency>
 ```
 
@@ -33,3 +44,8 @@ public class JacksonConfig {
 ## Version History
 ### 4.1.0.0
 - Initial version
+### 4.0.0.1
+- Depends on the recent TMF v4 model classes.
+### 4.0.0.2
+- Appends v4 into module names.
+- Depends on the recent TMF v4 model classes.

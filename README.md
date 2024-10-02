@@ -10,10 +10,6 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 - [TMF-641](dnext-tmf-641-model/README.md) Service Ordering Management
 - [TMF common](dnext-tmf-common-model/README.md) classes shared by the above extended Dnext TMF APIs.
 
-## Latest Versions Diagram
-
-![](src/main/config/model/tmf-models.jpg)
-
 ## Requirements
 
 - Java 17
@@ -26,3 +22,6 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.1
 - Starts Using new TMF-v4 Clients versions
 - Adds new classes to dnext-tmf-641-models
+### 1.0.2
+- Appends v4 into module names.
+- Depends on the recent TMF v4 model classes.

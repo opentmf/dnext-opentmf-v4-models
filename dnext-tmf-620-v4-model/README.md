@@ -6,11 +6,23 @@ This artifact holds the Dnext extended model classes for the TMF-620 Product Cat
 In order to use this model library, and teach Jackson to consider the extended model classes, the following two things needs to be done:
 
 ### 1. Add Maven Dependency
+#### Import PiA Commons Dependencies
+```xml
+<dependencyManagement>
+  <dependency>
+    <groupId>com.pia.commons</groupId>
+    <artifactId>pia-commons-versions</artifactId>
+    <version>RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+</dependencyManagement>
+```
+#### Add dnext-tmf-620-v4-model Module
 ```xml
 <dependency>
     <groupId>com.pia.commons</groupId>
-    <artifactId>dnext-tmf-620-model</artifactId>
-    <version>${version}</version>
+    <artifactId>dnext-tmf-620-v4-model</artifactId>
 </dependency>
 ```
 
@@ -33,3 +45,8 @@ public class JacksonConfig {
 ## Version History
 ### 4.0.0.0
 - Initial version
+### 4.0.0.1
+- Depends on the recent TMF v4 model classes.
+### 4.0.0.2
+- Appends v4 into module names.
+- Depends on the recent TMF v4 model classes.

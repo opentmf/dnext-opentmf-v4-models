@@ -10,10 +10,14 @@ import com.pia.tmf.v4.tmf641.model.ServiceOrderItem;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Cezmi Aslan
  */
+@Getter
+@Setter
 @JsonTypeInfo(
     use = Id.NAME,
     visible = true,

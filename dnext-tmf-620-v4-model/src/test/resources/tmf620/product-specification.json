@@ -64,39 +64,39 @@
     }
   ],
   "pExtension": {
-	"fulfillmentSpecification": {
-		 "add": "addSpecification",
-         "modify":"modifySpecification",
-         "modify.Migration":"modify.MigrationSpec",
-         "modify.Relocation":"modifySpec",
-         "modify.Takeover":"modifySpec",
-         "delete":"deleteSpec",
-         "statusChange":"statusChange",
-         "statusChange.Suspend":"statusChange",
-         "statusChange.Resume":"statusChange",
-          "postFlow": {
-    	    "add": "addSpecification",
-            "modify":"modifySpecification",
-            "modify.Migration":"modify.MigrationSpec",
-            "modify.Relocation":"modifySpec",
-            "modify.Takeover":"modifySpec",
-            "delete":"deleteSpec",
-            "statusChange":"statusChange",
-            "statusChange.Suspend":"statusChange",
-            "statusChange.Resume":"statusChange"  
-		  },
-          "preFlow":{
-    		 "add": "addSpecification",
-             "modify":"modifySpecification",
-             "modify.Migration":"modify.MigrationSpec",
-             "modify.Relocation":"modifySpec",
-             "modify.Takeover":"modifySpec",
-             "delete":"deleteSpec",
-             "statusChange":"statusChange",
-             "statusChange.Suspend":"statusChange",
-             "statusChange.Resume":"statusChange"
-		  }
-	},
+    "fulfillmentSpecification": {
+      "add": "addSpecification",
+      "modify": "modifySpecification",
+      "modify.Migration": "modify.MigrationSpec",
+      "modify.Relocation": "modifySpec",
+      "modify.Takeover": "modifySpec",
+      "delete": "deleteSpec",
+      "statusChange": "statusChange",
+      "statusChange.Suspend": "statusChange",
+      "statusChange.Resume": "statusChange",
+      "postFlow": {
+        "add": "addSpecification",
+        "modify": "modifySpecification",
+        "modify.Migration": "modify.MigrationSpec",
+        "modify.Relocation": "modifySpec",
+        "modify.Takeover": "modifySpec",
+        "delete": "deleteSpec",
+        "statusChange": "statusChange",
+        "statusChange.Suspend": "statusChange",
+        "statusChange.Resume": "statusChange"
+      },
+      "preFlow": {
+        "add": "addSpecification",
+        "modify": "modifySpecification",
+        "modify.Migration": "modify.MigrationSpec",
+        "modify.Relocation": "modifySpec",
+        "modify.Takeover": "modifySpec",
+        "delete": "deleteSpec",
+        "statusChange": "statusChange",
+        "statusChange.Suspend": "statusChange",
+        "statusChange.Resume": "statusChange"
+      }
+    },
     "fulfillmentSpecificationOperation": [
       {
         "operationType": "add",

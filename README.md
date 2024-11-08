@@ -5,10 +5,27 @@ Contains the Dnext extended model classes for certain TMF modules.
 The project is a multi-module project, that holds the commonly used classes in its dnext-tmf-common-model module and the corresponding model classes into their own dnext-tmf-XYZ-model libraries.
 
 Currently, it holds Dnext extended model classes for the following TMF APIs:
-- [TMF-622](dnext-tmf-622-model/README.md) Product Ordering Management
-- [TMF-638](dnext-tmf-638-model/README.md) Service Inventory Management
-- [TMF-641](dnext-tmf-641-model/README.md) Service Ordering Management
-- [TMF common](dnext-tmf-common-model/README.md) classes shared by the above extended Dnext TMF APIs.
+- [TMF-620](dnext-tmf-620-v4-model/README.md) Product Catalog Management
+- [TMF-622](dnext-tmf-622-v4-model/README.md) Product Ordering Management
+- [TMF-638](dnext-tmf-638-v4-model/README.md) Service Inventory Management
+- [TMF-641](dnext-tmf-641-v4-model/README.md) Service Ordering Management
+- [TMF-663](dnext-tmf-663-v4-model/README.md) Shopping Cart Management
+- [TMF-666](dnext-tmf-666-v4-model/README.md) Account Management
+- [TMF common](dnext-tmf-common-v4-model/README.md) classes shared by the above extended Dnext TMF APIs.
+
+## Usage
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.pia.commons</groupId>
+    <artifactId>dnext-tmf-638-v4-model</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.pia.commons</groupId>
+    <artifactId>dnext-tmf-641-v4-model</artifactId>
+  </dependency>
+</dependencies>
+```
 
 ## Requirements
 
@@ -25,3 +42,6 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.2
 - Appends v4 into module names.
 - Depends on the recent TMF v4 model classes.
+### 1.0.3
+- Fixes DNextServiceOrderItem missing Getter Setter
+- Adds orderCharacteristic to DNextServiceOrder

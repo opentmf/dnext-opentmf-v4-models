@@ -45,3 +45,5 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.3
 - Fixes DNextServiceOrderItem missing Getter Setter
 - Adds orderCharacteristic to DNextServiceOrder
+### 1.0.4
+- Updates to use the new versions of tmf-v4-models v3 and spring-boot 3.4.0

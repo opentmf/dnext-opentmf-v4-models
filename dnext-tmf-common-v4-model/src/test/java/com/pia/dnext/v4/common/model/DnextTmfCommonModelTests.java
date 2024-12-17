@@ -43,7 +43,8 @@ class DnextTmfCommonModelTests {
   static Stream<Arguments> dnextTmfCommonSampleJsonAndCorrespondingClassList() {
     return Stream.of(
         arguments("attachment", Attachment.class),
-        arguments("attachment", AttachmentRefOrValue.class)
+        arguments("attachment", AttachmentRefOrValue.class),
+        arguments("fulfillment-specification", FulfillmentSpecification.class)
     );
   }
 

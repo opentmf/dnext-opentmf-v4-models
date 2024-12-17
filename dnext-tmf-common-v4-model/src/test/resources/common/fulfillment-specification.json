@@ -1,0 +1,128 @@
+{
+  "fulfillmentSpecificationOperation": [
+    {
+      "operationType": "add",
+      "preFlow": "PreFlowBPMN",
+      "postFlow": "postFlowBPMN",
+      "cancelFlow": "cancelFlowBPMN",
+      "relatedSpecifications": [
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCMainNumberSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCMainNumberSpecification",
+            "name": "UCMainNumberSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCPSTNNomadicNumberSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCPSTNNomadicNumberSpecification",
+            "name": "UCPSTNNomadicNumberSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/servicespecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCPSTNNonGeoNumberSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCPSTNNonGeoNumberSpecification",
+            "name": "UCPSTNNonGeoNumberSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCPSTNGeoNumberSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCPSTNGeoNumberSpecification",
+            "name": "UCPSTNGeoNumberSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCDigitalLineAddOnLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCDigitalLineAddOnLicenseSpecification",
+            "name": "UCDigitalLineAddOnLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCDigitalLineLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCDigitalLineLicenseSpecification",
+            "name": "UCDigitalLineLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCNoNumberLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCNoNumberLicenseSpecification",
+            "name": "UCNoNumberLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCNumberLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCNumberLicenseSpecification",
+            "name": "UCNumberLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCPSTNClipPortInAddOnNumberSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCPSTNClipPortInAddOnNumberSpecification",
+            "name": "UCPSTNClipPortInAddOnNumberSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        }
+      ],
+      "isBypassInventoryTasks": false
+    },
+    {
+      "operationType": "modify",
+      "preFlow": "VBUCBackEndCompletion",
+      "relatedSpecifications": [
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCDigitalLineLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCDigitalLineLicenseSpecification",
+            "name": "UCDigitalLineLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCNoNumberLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCNoNumberLicenseSpecification",
+            "name": "UCNoNumberLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        },
+        {
+          "relation": "reliesOn",
+          "specification": {
+            "id": "UCNumberLicenseSpecification",
+            "href": "/tmf-api/serviceCatalogManagement/v4/serviceSpecification/UCNumberLicenseSpecification",
+            "name": "UCNumberLicenseSpecification",
+            "@schemaLocation": "/tmf-api/serviceCatalogManagement/v4/schema/productspecification.json"
+          }
+        }
+      ],
+      "isBypassInventoryTasks": false
+    }
+  ]
+}

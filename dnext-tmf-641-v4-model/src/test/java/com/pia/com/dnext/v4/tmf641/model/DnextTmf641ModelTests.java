@@ -12,6 +12,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import com.pia.dnext.v4.tmf641.config.DnextTmf641JacksonConfig;
 import com.pia.dnext.v4.tmf641.model.DnextCancelServiceOrder;
+import com.pia.dnext.v4.tmf641.model.DnextCancelServiceOrderCreate;
 import com.pia.dnext.v4.tmf641.model.DnextServiceOrder;
 import com.pia.dnext.v4.tmf641.model.DnextServiceOrderCreate;
 import com.pia.dnext.v4.tmf641.model.DnextServiceOrderItem;
@@ -45,6 +46,8 @@ class DnextTmf641ModelTests {
     return Stream.of(
         arguments("service_order", DnextServiceOrder.class),
         arguments("service_order_create", DnextServiceOrderCreate.class),
+        arguments("cancel_service_order_create", DnextCancelServiceOrderCreate.class),
+        arguments("cancel_service_order_create2", DnextCancelServiceOrderCreate.class),
         arguments("cancel_service_order", DnextCancelServiceOrder.class),
         arguments("service_order_create", ServiceOrderCreate.class));
   }

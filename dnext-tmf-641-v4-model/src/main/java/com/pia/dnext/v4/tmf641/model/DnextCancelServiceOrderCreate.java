@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.pia.tmf.v4.tmf641.model.CancelServiceOrder;
-import java.time.OffsetDateTime;
+import com.pia.tmf.v4.tmf641.model.CancelServiceOrderCreate;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,14 +17,9 @@ import lombok.Setter;
     use = Id.NAME,
     visible = true,
     include = As.EXISTING_PROPERTY,
-    defaultImpl = DnextCancelServiceOrder.class)
-@JsonTypeName("CancelServiceOrder")
-public class DnextCancelServiceOrder extends CancelServiceOrder {
+    defaultImpl = DnextCancelServiceOrderCreate.class)
+@JsonTypeName("CancelServiceOrderCreate")
+public class DnextCancelServiceOrderCreate extends CancelServiceOrderCreate {
 
   private CancellationType cancellationType;
-  private String createdBy;
-  private OffsetDateTime createdDate;
-  private String updatedBy;
-  private OffsetDateTime updatedDate;
-  private Long revision;
 }

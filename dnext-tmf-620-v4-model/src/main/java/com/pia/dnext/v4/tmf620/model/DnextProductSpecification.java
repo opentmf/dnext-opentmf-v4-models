@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.pia.dnext.v4.common.model.FulfillmentSpecification;
 import com.pia.tmf.v4.tmf620.model.ProductSpecification;
 import jakarta.validation.Valid;
 import java.time.OffsetDateTime;
@@ -26,7 +27,7 @@ import lombok.Setter;
 public class DnextProductSpecification extends ProductSpecification {
 
   @JsonProperty("pExtension")
-  private @Valid ProductSpecificationExtension pExtension;
+  private @Valid FulfillmentSpecification pExtension;
   private String createdBy;
   private OffsetDateTime createdDate;
   private String updatedBy;

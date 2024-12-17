@@ -47,3 +47,7 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 - Adds orderCharacteristic to DNextServiceOrder
 ### 1.0.4
 - Updates to use the new versions of tmf-v4-models v3 and spring-boot 3.4.0
+### 1.0.5
+- Adds dnext-tmf-633-model service catalog model.
+- Adds cancellationType to DNext's TMF-641 CancelServiceOrder extended classes.
+- Centralize the fulfillmentSpecification extension and remove the obsoleted old format.

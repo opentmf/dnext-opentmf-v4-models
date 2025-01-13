@@ -53,3 +53,4 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 - Centralize the fulfillmentSpecification extension and remove the obsoleted old format.
 ### 1.0.6
 - Adds DNextProductSpecificationCharacteristic and DnextProductSpecificationCharacteristicValueUse classes for dnext-tmf-620-v4-model.
+- Updates Spring Boot version to 3.4.1

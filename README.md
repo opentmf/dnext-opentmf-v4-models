@@ -51,3 +51,5 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 - Adds dnext-tmf-633-model service catalog model.
 - Adds cancellationType to DNext's TMF-641 CancelServiceOrder extended classes.
 - Centralize the fulfillmentSpecification extension and remove the obsoleted old format.
+### 1.0.6
+- Adds DNextProductSpecificationCharacteristic and DnextProductSpecificationCharacteristicValueUse classes for dnext-tmf-620-v4-model.

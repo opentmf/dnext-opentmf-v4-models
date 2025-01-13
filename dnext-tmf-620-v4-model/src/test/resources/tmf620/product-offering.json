@@ -1,0 +1,178 @@
+{
+  "revision": 3,
+  "createdDate": "2024-11-28T10:33:15.316Z",
+  "updatedDate": "2024-12-26T11:05:35.456Z",
+  "createdBy": "admin",
+  "updatedBy": "admin",
+  "id": "domainName",
+  "version": "1",
+  "href": "/api/productCatalogManagement/v4/productOffering/domainName:(version=1)",
+  "lifecycleStatus": "Launched",
+  "lastUpdate": "2024-12-26T11:05:35.171Z",
+  "validFor": {
+    "startDateTime": "2024-11-28T11:34:09Z"
+  },
+  "@baseType": "ProductOffering",
+  "@schemaLocation": "/api/productCatalogManagement/v4/schema/productoffering.json",
+  "@type": "ProductOffering",
+  "aclRelatedParty": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "role": "owner",
+      "@type": "RelatedParty",
+      "@referredType": "IAMUser"
+    }
+  ],
+  "name": "Domain Name",
+  "isBundle": false,
+  "isSellable": true,
+  "productSpecification": {
+    "id": "domainNamePS",
+    "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+    "name": "Domain Name PS",
+    "version": "1"
+  },
+  "prodSpecCharValueUse": [
+    {
+      "name": "Domain Name AUTH Code",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "string",
+          "isDefault": false
+        }
+      ],
+      "id": "Domain Name AUTH Code",
+      "mandatory": true,
+      "isVisible": false,
+      "category": [
+        {
+          "id": "30",
+          "name": "PartnerDomain"
+        }
+      ]
+    },
+    {
+      "name": "IP Address of Primary DNS",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "string",
+          "isDefault": false
+        }
+      ],
+      "id": "IP Address of Primary DNS",
+      "mandatory": false,
+      "isVisible": true
+    },
+    {
+      "name": "Hostname of Primary DNS",
+      "valueType": "string",
+      "configurable": true,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "string",
+          "isDefault": false
+        }
+      ],
+      "id": "Hostname of Primary DNS",
+      "mandatory": false,
+      "isVisible": true
+    },
+    {
+      "name": "Secondary DNS Service",
+      "valueType": "true/false",
+      "characteristicType": "Simple Value",
+      "configurable": true,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "true/false",
+          "value": "true",
+          "isDefault": false
+        }
+      ],
+      "id": "Secondary DNS Service",
+      "mandatory": false,
+      "isVisible": true
+    },
+    {
+      "name": "Domain Name",
+      "valueType": "string",
+      "configurable": false,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "string",
+          "isDefault": false
+        }
+      ],
+      "id": "Domain Name",
+      "mandatory": false,
+      "isVisible": true
+    },
+    {
+      "name": "Domain Name Service",
+      "valueType": "string",
+      "configurable": false,
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "productSpecification": {
+        "id": "domainNamePS",
+        "href": "/api/productCatalogManagement/v4/productSpecification/domainNamePS:(version=1)",
+        "name": "Domain Name PS",
+        "version": "1"
+      },
+      "productSpecCharacteristicValue": [
+        {
+          "valueType": "string",
+          "isDefault": false
+        }
+      ],
+      "id": "Domain Name Service",
+      "mandatory": false,
+      "isVisible": true
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import com.pia.dnext.v4.tmf620.config.DnextTmf620JacksonConfig;
 import com.pia.dnext.v4.tmf620.model.DnextProductSpecification;
+import com.pia.tmf.v4.tmf620.model.ProductOffering;
 import com.pia.tmf.v4.tmf620.model.ProductSpecification;
 import java.io.InputStream;
 import java.util.stream.Stream;
@@ -59,5 +60,23 @@ class DnextTmf620ModelTests {
     var dnextPs = (DnextProductSpecification) productSpec;
     Assertions.assertNotNull(dnextPs.getPExtension());
     Assertions.assertEquals(1, dnextPs.getPExtension().getFulfillmentSpecificationOperation().size());
+  }
+
+  @Test
+  void test_deserializeProductSpecification_usesExtendedCharacteristicModel() {
+    var productSpec = streamToObject(stream("product-specification"), ProductSpecification.class);
+    var dnextProductSpecificationCharacteristic = (DnextProductSpecificationCharacteristic) productSpec.getProductSpecCharacteristics().get(0);
+    Assertions.assertNotNull(dnextProductSpecificationCharacteristic.getCategory());
+    Assertions.assertTrue(dnextProductSpecificationCharacteristic.isMandatory());
+    Assertions.assertFalse(dnextProductSpecificationCharacteristic.isUnique());
+  }
+
+  @Test
+  void test_deserializeProductOffering_usesExtendedCharacteristicModel() {
+    var productOffering = streamToObject(stream("product-offering"), ProductOffering.class);
+    var prodSpecCharValueUse = (DnextProductSpecificationCharacteristicValueUse) productOffering.getProdSpecCharValueUses().get(0);
+    Assertions.assertNotNull(prodSpecCharValueUse.getCategory());
+    Assertions.assertTrue(prodSpecCharValueUse.isMandatory());
+    Assertions.assertFalse(prodSpecCharValueUse.isVisible());
   }
 }

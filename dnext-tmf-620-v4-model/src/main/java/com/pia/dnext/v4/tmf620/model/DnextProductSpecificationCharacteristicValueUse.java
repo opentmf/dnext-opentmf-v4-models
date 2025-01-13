@@ -1,12 +1,11 @@
 package com.pia.dnext.v4.tmf620.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.pia.tmf.v4.tmf620.model.Category;
-import com.pia.tmf.v4.tmf620.model.ProductSpecificationCharacteristic;
+import com.pia.tmf.v4.tmf620.model.ProductSpecificationCharacteristicValueUse;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,9 +19,9 @@ import lombok.Setter;
     use = Id.NAME,
     visible = true,
     include = As.EXISTING_PROPERTY,
-    defaultImpl = DnextProductSpecificationCharacteristic.class)
-@JsonTypeName("ProductSpecificationCharacteristic")
-public class DnextProductSpecificationCharacteristic extends ProductSpecificationCharacteristic {
+    defaultImpl = DnextProductSpecificationCharacteristicValueUse.class)
+@JsonTypeName("ProductSpecificationCharacteristicValueUse")
+public class DnextProductSpecificationCharacteristicValueUse extends ProductSpecificationCharacteristicValueUse {
 
   private boolean mandatory;
   private boolean isUnique;

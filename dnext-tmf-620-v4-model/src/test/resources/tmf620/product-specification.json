@@ -21,7 +21,13 @@
       "id": "cspPartnerDomainName",
       "mandatory": true,
       "isUnique": false,
-      "isVisible": true
+      "isVisible": true,
+      "category": [
+        {
+          "id": "30",
+          "name": "PartnerDomain"
+        }
+      ]
     },
     {
       "name": "customerDomainName",

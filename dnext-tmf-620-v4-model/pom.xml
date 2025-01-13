@@ -4,11 +4,11 @@
   <parent>
     <groupId>com.pia.commons</groupId>
     <artifactId>dnext-tmf-v4-models</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7-SNAPSHOT</version>
   </parent>
 
   <artifactId>dnext-tmf-620-v4-model</artifactId>
-  <version>4.0.0.6</version>
+  <version>4.0.0.7-SNAPSHOT</version>
 
   <properties>
     <tmf-620-v4-model.version>4.1.0.3</tmf-620-v4-model.version>
@@ -18,7 +18,7 @@
     <dependency>
       <groupId>com.pia.commons</groupId>
       <artifactId>dnext-tmf-common-v4-model</artifactId>
-      <version>4.1.0.6</version>
+      <version>4.1.0.7-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.pia.commons</groupId>

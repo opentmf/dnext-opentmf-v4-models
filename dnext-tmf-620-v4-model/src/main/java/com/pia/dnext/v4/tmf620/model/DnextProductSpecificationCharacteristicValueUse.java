@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.fasterxml.jackson.annotation.JsonTypeName;
-import com.pia.tmf.v4.tmf620.model.Category;
+import com.pia.tmf.v4.common.model.CategoryRef;
 import com.pia.tmf.v4.tmf620.model.ProductSpecificationCharacteristicValueUse;
 import java.util.List;
 import lombok.Getter;
@@ -26,5 +26,5 @@ public class DnextProductSpecificationCharacteristicValueUse extends ProductSpec
   private boolean mandatory;
   private boolean isUnique;
   private boolean isVisible;
-  private List<Category> category;
+  private List<CategoryRef> category;
 }

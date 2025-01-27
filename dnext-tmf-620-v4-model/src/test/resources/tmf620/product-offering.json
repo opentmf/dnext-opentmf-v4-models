@@ -55,6 +55,8 @@
       "id": "Domain Name AUTH Code",
       "mandatory": true,
       "isVisible": false,
+      "configurable": true,
+      "characteristicType": "String",
       "category": [
         {
           "id": "30",

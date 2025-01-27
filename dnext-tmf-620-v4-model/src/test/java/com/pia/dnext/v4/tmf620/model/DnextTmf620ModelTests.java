@@ -78,5 +78,7 @@ class DnextTmf620ModelTests {
     Assertions.assertNotNull(prodSpecCharValueUse.getCategory());
     Assertions.assertTrue(prodSpecCharValueUse.isMandatory());
     Assertions.assertFalse(prodSpecCharValueUse.isVisible());
+    Assertions.assertTrue(prodSpecCharValueUse.isConfigurable());
+    Assertions.assertNotNull(prodSpecCharValueUse.getCharacteristicType());
   }
 }

@@ -27,4 +27,6 @@ public class DnextProductSpecificationCharacteristicValueUse extends ProductSpec
   private boolean isUnique;
   private boolean isVisible;
   private List<CategoryRef> category;
+  private boolean configurable;
+  private String characteristicType;
 }

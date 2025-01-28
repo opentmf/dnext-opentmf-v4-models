@@ -29,4 +29,5 @@ public class DnextProductSpecificationCharacteristicValueUse extends ProductSpec
   private List<CategoryRef> category;
   private boolean configurable;
   private String characteristicType;
+  private String regex;
 }

@@ -25,9 +25,12 @@ import lombok.Setter;
 public class DnextProductSpecificationCharacteristic extends ProductSpecificationCharacteristic {
 
   private boolean mandatory;
+
   @JsonProperty("isUnique")
-  private boolean isUnique;
+  private boolean unique;
+
   @JsonProperty("isVisible")
-  private boolean isVisible;
+  private boolean visible;
+
   private List<CategoryRef> category;
 }

@@ -37,6 +37,7 @@
     {
       "name": "Domain Name AUTH Code",
       "valueType": "string",
+      "regex": "regex",
       "configurable": true,
       "minCardinality": 0,
       "maxCardinality": 1,
@@ -55,7 +56,6 @@
       "id": "Domain Name AUTH Code",
       "mandatory": true,
       "isVisible": false,
-      "configurable": true,
       "characteristicType": "String",
       "category": [
         {

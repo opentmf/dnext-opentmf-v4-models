@@ -1,5 +1,6 @@
 package com.pia.dnext.v4.tmf620.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
@@ -24,9 +25,15 @@ import lombok.Setter;
 public class DnextProductSpecificationCharacteristicValueUse extends ProductSpecificationCharacteristicValueUse {
 
   private boolean mandatory;
-  private boolean isUnique;
-  private boolean isVisible;
+
+  @JsonProperty("isUnique")
+  private boolean unique;
+
+  @JsonProperty("isVisible")
+  private boolean visible;
+
   private List<CategoryRef> category;
   private boolean configurable;
   private String characteristicType;
+  private String regex;
 }

@@ -50,3 +50,5 @@ public class JacksonConfig {
 ### 4.0.0.2
 - Appends v4 into module names.
 - Depends on the recent TMF v4 model classes.
+### 4.0.0.7
+- Removed is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.

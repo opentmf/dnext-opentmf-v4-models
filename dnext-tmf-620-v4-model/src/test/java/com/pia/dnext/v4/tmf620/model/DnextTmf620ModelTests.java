@@ -8,7 +8,6 @@ import static com.pia.commons.validation.ValidationUtil.ensureValid;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import com.pia.dnext.v4.tmf620.config.DnextTmf620JacksonConfig;
-import com.pia.dnext.v4.tmf620.model.DnextProductSpecification;
 import com.pia.tmf.v4.tmf620.model.ProductOffering;
 import com.pia.tmf.v4.tmf620.model.ProductSpecification;
 import java.io.InputStream;
@@ -80,5 +79,6 @@ class DnextTmf620ModelTests {
     Assertions.assertFalse(prodSpecCharValueUse.isVisible());
     Assertions.assertTrue(prodSpecCharValueUse.isConfigurable());
     Assertions.assertNotNull(prodSpecCharValueUse.getCharacteristicType());
+    Assertions.assertNotNull(prodSpecCharValueUse.getRegex());
   }
 }

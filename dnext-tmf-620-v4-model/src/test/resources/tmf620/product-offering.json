@@ -176,5 +176,13 @@
       "mandatory": false,
       "isVisible": true
     }
+  ],
+  "rules": [
+    {
+      "id": "ruleForServiceResilienceRole",
+      "href": "/api/ruleEngine/v1/ruleSet/ruleForServiceResilienceRole",
+      "name": "Service Resilience Role",
+      "role": "ruleForServiceResilienceRole"
+    }
   ]
 }

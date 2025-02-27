@@ -4,7 +4,7 @@
 
   <groupId>com.pia.commons</groupId>
   <artifactId>dnext-tmf-v4-models</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10-SNAPSHOT</version>
   <modules>
     <module>dnext-tmf-620-v4-model</module>
     <module>dnext-tmf-622-v4-model</module>
@@ -281,7 +281,7 @@
   <scm>
     <connection>scm:git:git@github.com:pia-commons/dnext-tmf-v4-models.git</connection>
     <developerConnection>scm:git:git@github.com:pia-commons/dnext-tmf-v4-models.git</developerConnection>
-    <tag>dnext-tmf-v4-models-1.0.9</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>

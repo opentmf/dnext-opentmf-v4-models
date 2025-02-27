@@ -8,7 +8,6 @@ import static com.pia.commons.validation.ValidationUtil.ensureValid;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 import com.pia.dnext.v4.tmf620.config.DnextTmf620JacksonConfig;
-import com.pia.tmf.v4.tmf620.model.ProductOffering;
 import com.pia.tmf.v4.tmf620.model.ProductSpecification;
 import java.io.InputStream;
 import java.util.stream.Stream;
@@ -72,8 +71,10 @@ class DnextTmf620ModelTests {
 
   @Test
   void test_deserializeProductOffering_usesExtendedCharacteristicModel() {
-    var productOffering = streamToObject(stream("product-offering"), ProductOffering.class);
+    var productOffering = streamToObject(stream("product-offering"), DnextProductOffering.class);
     var prodSpecCharValueUse = (DnextProductSpecificationCharacteristicValueUse) productOffering.getProdSpecCharValueUses().get(0);
+    var rules = productOffering.getRules();
+    Assertions.assertEquals(1,rules.size());
     Assertions.assertNotNull(prodSpecCharValueUse.getCategory());
     Assertions.assertTrue(prodSpecCharValueUse.isMandatory());
     Assertions.assertFalse(prodSpecCharValueUse.isVisible());

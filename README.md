@@ -57,3 +57,8 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.7
 - Removed is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.
 - Updates Spring Boot version to 3.4.2
+### 1.0.8
+- Fixed removing is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.
+### 1.0.9
+- Adds DNextProductOffering with the extended field "rules".
+- Updates to Spring Boot 3.4.3

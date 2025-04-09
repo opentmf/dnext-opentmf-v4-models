@@ -2,30 +2,71 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.pia.commons</groupId>
-  <artifactId>dnext-tmf-v4-models</artifactId>
-  <version>1.0.10-SNAPSHOT</version>
-  <modules>
-    <module>dnext-tmf-620-v4-model</module>
-    <module>dnext-tmf-622-v4-model</module>
-    <module>dnext-tmf-641-v4-model</module>
-    <module>dnext-tmf-common-v4-model</module>
-    <module>dnext-tmf-638-v4-model</module>
-    <module>dnext-tmf-663-v4-model</module>
-    <module>dnext-tmf-666-v4-model</module>
-    <module>dnext-tmf-633-v4-model</module>
-  </modules>
+  <groupId>org.opentmf.dnext</groupId>
+  <artifactId>dnext-opentmf-v4-models</artifactId>
+  <version>1.1.0-SNAPSHOT</version>
+
   <packaging>pom</packaging>
+  <modules>
+    <module>dnext-opentmf-620-v4-model</module>
+    <module>dnext-opentmf-622-v4-model</module>
+    <module>dnext-opentmf-633-v4-model</module>
+    <module>dnext-opentmf-638-v4-model</module>
+    <module>dnext-opentmf-641-v4-model</module>
+    <module>dnext-opentmf-663-v4-model</module>
+    <module>dnext-opentmf-666-v4-model</module>
+    <module>dnext-opentmf-common-v4-model</module>
+  </modules>
+
+  <description>
+    DNext Model Extensions for TMF v4
+  </description>
+
+  <organization>
+    <name>PiA Group</name>
+    <url>https://www.pia-group.net/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>gokhanus</id>
+      <name>Gokhan Demir</name>
+      <email>gokhan@opentmf.org</email>
+    </developer>
+    <developer>
+      <id>yusuf-bozkurt</id>
+      <name>Yusuf Bozkurt</name>
+      <email>yusuf.bozkurt@pia-team.com</email>
+    </developer>
+    <developer>
+      <id>cezmi-aslan</id>
+      <name>Cezmi Aslan</name>
+      <email>cezmi.aslan@pia-team.com</email>
+    </developer>
+    <developer>
+      <id>sezer</id>
+      <name>Sezer Aydin</name>
+      <email>sezer.aydin@pia-team.com</email>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A permissive open-source license</comments>
+    </license>
+  </licenses>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <spring-boot.version>3.4.3</spring-boot.version>
-    <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+    <spring-boot.version>3.4.4</spring-boot.version>
+    <jacoco-maven-plugin.version>0.8.13</jacoco-maven-plugin.version>
     <sonar-plugin.version>5.0.0.4389</sonar-plugin.version>
-    <nexus-staging-plugin.version>1.7.0</nexus-staging-plugin.version>
     <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
     <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
@@ -36,6 +77,8 @@
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
     <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
+    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+    <central-publishing-maven-plugin.version>0.7.0</central-publishing-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
@@ -119,6 +162,11 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>${maven-resources-plugin.version}</version>
         </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>${sonar-plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -144,7 +192,22 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
         </configuration>
@@ -155,7 +218,6 @@
         <executions>
           <execution>
             <id>attach-sources</id>
-            <phase>deploy</phase>
             <goals>
               <goal>jar-no-fork</goal>
             </goals>
@@ -168,7 +230,6 @@
         <executions>
           <execution>
             <id>attach-javadocs</id>
-            <phase>deploy</phase>
             <goals>
               <goal>jar</goal>
             </goals>
@@ -181,34 +242,36 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>${nexus-staging-plugin.version}</version>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>${maven-gpg-plugin.version}</version>
         <executions>
           <execution>
-            <id>default-deploy</id>
-            <phase>deploy</phase>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
             <goals>
-              <goal>deploy</goal>
+              <goal>sign</goal>
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${maven-release-plugin.version}</version>
         <configuration>
-          <serverId>pia-commons-release</serverId>
-          <nexusUrl>https://nexus.dnext-pia.com/</nexusUrl>
-          <skipStaging>true</skipStaging>
+          <useReleaseProfile>false</useReleaseProfile>
+          <goals>deploy</goals>
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>${sonar-plugin.version}</version>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>${central-publishing-maven-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>publish-to-central</publishingServerId>
+          <autoPublish>true</autoPublish>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -267,20 +330,10 @@
     </plugins>
   </build>
 
-  <distributionManagement>
-    <repository>
-      <id>pia-commons-release</id>
-      <url>https://nexus.dnext-pia.com/repository/pia-commons-release/</url>
-    </repository>
-    <snapshotRepository>
-      <id>pia-commons-snapshot</id>
-      <url>https://nexus.dnext-pia.com/repository/pia-commons-snapshot/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
   <scm>
-    <connection>scm:git:git@github.com:pia-commons/dnext-tmf-v4-models.git</connection>
-    <developerConnection>scm:git:git@github.com:pia-commons/dnext-tmf-v4-models.git</developerConnection>
+    <url>https://github.com/opentmf/dnext-opentmf-v4-models</url>
+    <connection>scm:git:git@github.com:opentmf/dnext-opentmf-v4-models.git</connection>
+    <developerConnection>scm:git:git@github.com:opentmf/dnext-opentmf-v4-models.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 

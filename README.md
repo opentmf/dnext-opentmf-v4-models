@@ -1,28 +1,42 @@
-# dnext-tmf-models
+# dnext-opentmf-v4-models
 
 Contains the Dnext extended model classes for certain TMF modules.
 
-The project is a multi-module project, that holds the commonly used classes in its dnext-tmf-common-model module and the corresponding model classes into their own dnext-tmf-XYZ-model libraries.
+The project is a multi-module project, that holds the commonly used classes in its dnext-opentmf-common-model module and the corresponding model classes into their own dnext-opentmf-XYZ-model libraries.
 
 Currently, it holds Dnext extended model classes for the following TMF APIs:
-- [TMF-620](dnext-tmf-620-v4-model/README.md) Product Catalog Management
-- [TMF-622](dnext-tmf-622-v4-model/README.md) Product Ordering Management
-- [TMF-638](dnext-tmf-638-v4-model/README.md) Service Inventory Management
-- [TMF-641](dnext-tmf-641-v4-model/README.md) Service Ordering Management
-- [TMF-663](dnext-tmf-663-v4-model/README.md) Shopping Cart Management
-- [TMF-666](dnext-tmf-666-v4-model/README.md) Account Management
-- [TMF common](dnext-tmf-common-v4-model/README.md) classes shared by the above extended Dnext TMF APIs.
+- [TMF-620](dnext-opentmf-620-v4-model/README.md) Product Catalog Management
+- [TMF-622](dnext-opentmf-622-v4-model/README.md) Product Ordering Management
+- [TMF-638](dnext-opentmf-638-v4-model/README.md) Service Inventory Management
+- [TMF-641](dnext-opentmf-641-v4-model/README.md) Service Ordering Management
+- [TMF-663](dnext-opentmf-663-v4-model/README.md) Shopping Cart Management
+- [TMF-666](dnext-opentmf-666-v4-model/README.md) Account Management
+- [TMF common](dnext-opentmf-common-v4-model/README.md) classes shared by the above extended Dnext TMF APIs.
 
 ## Usage
+### 1. Add Maven Dependency
+#### Import OpenTMF Commons Dependencies
+```xml
+<dependencyManagement>
+  <dependency>
+    <groupId>org.opentmf</groupId>
+    <artifactId>opentmf-versions</artifactId>
+    <version>RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+</dependencyManagement>
+```
+#### Add dnext-opentmf-xyz-v4-model Modules
 ```xml
 <dependencies>
   <dependency>
-    <groupId>com.pia.commons</groupId>
-    <artifactId>dnext-tmf-638-v4-model</artifactId>
+    <groupId>org.opentmf.dnext</groupId>
+    <artifactId>dnext-opentmf-638-v4-model</artifactId>
   </dependency>
   <dependency>
-    <groupId>com.pia.commons</groupId>
-    <artifactId>dnext-tmf-641-v4-model</artifactId>
+    <groupId>org.opentmf.dnext</groupId>
+    <artifactId>dnext-opentmf-641-v4-model</artifactId>
   </dependency>
 </dependencies>
 ```
@@ -38,7 +52,7 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 - Initial Version
 ### 1.0.1
 - Starts Using new TMF-v4 Clients versions
-- Adds new classes to dnext-tmf-641-models
+- Adds new classes to dnext-opentmf-641-v4-models
 ### 1.0.2
 - Appends v4 into module names.
 - Depends on the recent TMF v4 model classes.
@@ -48,11 +62,11 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.4
 - Updates to use the new versions of tmf-v4-models v3 and spring-boot 3.4.0
 ### 1.0.5
-- Adds dnext-tmf-633-model service catalog model.
+- Adds dnext-opentmf-633-v4-model service catalog model.
 - Adds cancellationType to DNext's TMF-641 CancelServiceOrder extended classes.
 - Centralize the fulfillmentSpecification extension and remove the obsoleted old format.
 ### 1.0.6
-- Adds DNextProductSpecificationCharacteristic and DnextProductSpecificationCharacteristicValueUse classes for dnext-tmf-620-v4-model.
+- Adds DNextProductSpecificationCharacteristic and DnextProductSpecificationCharacteristicValueUse classes for dnext-opentmf-620-v4-model.
 - Updates Spring Boot version to 3.4.1
 ### 1.0.7
 - Removed is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.
@@ -62,3 +76,6 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.0.9
 - Adds DNextProductOffering with the extended field "rules".
 - Updates to Spring Boot 3.4.3
+### 1.1.0
+- The initial open-source version
+- Updates to Spring Boot 3.4.4

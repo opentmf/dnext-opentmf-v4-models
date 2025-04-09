@@ -4,7 +4,7 @@
 
   <groupId>org.opentmf.dnext</groupId>
   <artifactId>dnext-opentmf-v4-models</artifactId>
-  <version>1.1.0-SNAPSHOT</version>
+  <version>1.1.0</version>
 
   <packaging>pom</packaging>
   <modules>
@@ -336,7 +336,7 @@
     <url>https://github.com/opentmf/dnext-opentmf-v4-models</url>
     <connection>scm:git:git@github.com:opentmf/dnext-opentmf-v4-models.git</connection>
     <developerConnection>scm:git:git@github.com:opentmf/dnext-opentmf-v4-models.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>dnext-opentmf-v4-models-1.1.0</tag>
   </scm>
 
 </project>

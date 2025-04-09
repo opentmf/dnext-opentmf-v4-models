@@ -4,11 +4,11 @@
   <parent>
     <groupId>org.opentmf.dnext</groupId>
     <artifactId>dnext-opentmf-v4-models</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>dnext-opentmf-633-v4-model</artifactId>
-  <version>4.0.0.10</version>
+  <version>4.0.0.11-SNAPSHOT</version>
 
   <properties>
     <opentmf-633-v4-model.version>4.0.0.5</opentmf-633-v4-model.version>
@@ -18,7 +18,7 @@
     <dependency>
       <groupId>org.opentmf.dnext</groupId>
       <artifactId>dnext-opentmf-common-v4-model</artifactId>
-      <version>4.1.0.10</version>
+      <version>4.1.0.11-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.opentmf.model</groupId>

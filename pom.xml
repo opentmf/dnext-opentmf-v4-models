@@ -18,6 +18,8 @@
     <module>dnext-opentmf-common-v4-model</module>
   </modules>
 
+  <url>https://github.com/opentmf/dnext-opentmf-v4-models</url>
+
   <description>
     DNext Model Extensions for TMF v4
   </description>

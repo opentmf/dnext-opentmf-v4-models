@@ -9,6 +9,7 @@
 
   <artifactId>dnext-opentmf-620-v4-model</artifactId>
   <version>4.0.0.11-SNAPSHOT</version>
+  <name>dnext-opentmf-620-v4-model</name>
 
   <properties>
     <opentmf-620-v4-model.version>4.1.0.5</opentmf-620-v4-model.version>

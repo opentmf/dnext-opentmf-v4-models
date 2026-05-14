@@ -9,6 +9,7 @@
 
   <artifactId>dnext-opentmf-641-v4-model</artifactId>
   <version>4.1.0.11-SNAPSHOT</version>
+  <name>dnext-opentmf-641-v4-model</name>
 
   <properties>
     <opentmf-641-v4-model.version>4.1.0.5</opentmf-641-v4-model.version>

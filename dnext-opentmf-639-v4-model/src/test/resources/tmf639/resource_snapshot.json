@@ -1,0 +1,13 @@
+{
+  "id": "snap-1",
+  "href": "https://example.com/tmf-api/resourceInventory/v4/resourceSnapshot/snap-1",
+  "orderId": "ord-1",
+  "orderItemId": "ordi-1",
+  "revision": 1,
+  "snapshotObject": {
+    "@type": "LogicalResource",
+    "id": "lr-snap",
+    "href": "https://example.com/tmf-api/resourceInventory/v4/logicalResource/lr-snap",
+    "value": "001"
+  }
+}

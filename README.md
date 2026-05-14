@@ -2,12 +2,13 @@
 
 Contains the Dnext extended model classes for certain TMF modules.
 
-The project is a multi-module project, that holds the commonly used classes in its dnext-opentmf-common-model module and the corresponding model classes into their own dnext-opentmf-XYZ-model libraries.
+The project is a multi-module project, that holds the commonly used classes in its dnext-opentmf-common-v4-model module and the corresponding model classes into their own dnext-opentmf-XYZ-model libraries.
 
 Currently, it holds Dnext extended model classes for the following TMF APIs:
 - [TMF-620](dnext-opentmf-620-v4-model/README.md) Product Catalog Management
 - [TMF-622](dnext-opentmf-622-v4-model/README.md) Product Ordering Management
 - [TMF-638](dnext-opentmf-638-v4-model/README.md) Service Inventory Management
+- [TMF-639](dnext-opentmf-639-v4-model/README.md) Resource Inventory Management
 - [TMF-641](dnext-opentmf-641-v4-model/README.md) Service Ordering Management
 - [TMF-663](dnext-opentmf-663-v4-model/README.md) Shopping Cart Management
 - [TMF-666](dnext-opentmf-666-v4-model/README.md) Account Management
@@ -36,10 +37,22 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
   </dependency>
   <dependency>
     <groupId>org.opentmf.dnext</groupId>
+    <artifactId>dnext-opentmf-639-v4-model</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.opentmf.dnext</groupId>
     <artifactId>dnext-opentmf-641-v4-model</artifactId>
   </dependency>
 </dependencies>
 ```
+
+## Module boundaries
+
+- **`dnext-opentmf-NNN-v4-model` modules must not depend on each other.** Each TMF extension module may depend on **`dnext-opentmf-common-v4-model`** and on OpenTMF artifacts (for example `opentmf-639-v4-model`), but not on another `dnext-opentmf-MMM-v4-model`.
+- **`dnext-opentmf-common-v4-model`** is for types that **more than one** TMF module would actually reuse. Types that are only used within one TMF area (for example extended resource create/update used only with TMF-639) stay in that module’s library.
+- TMF extension modules should still list only their own `opentmf-NNN-v4-model` plus **`dnext-opentmf-common-v4-model`** in the POM; **`dnext-opentmf-common-v4-model`** also declares **`opentmf-product-v4-model`** and **`opentmf-service-v4-model`** so cross-domain OpenTMF types (for example on resource create/update) are available transitively without duplicating those dependencies on every TMF module, at the cost of every common consumer inheriting those two jars.
+
+To catch accidental sibling dependencies in CI, add a Maven Enforcer `bannedDependencies` rule on the parent reactor (exclude each `org.opentmf.dnext:dnext-opentmf-NNN-v4-model` except `dnext-opentmf-common-v4-model`).
 
 ## Requirements
 
@@ -79,3 +92,11 @@ Currently, it holds Dnext extended model classes for the following TMF APIs:
 ### 1.1.0
 - The initial open-source version
 - Updates to Spring Boot 3.4.4
+### 1.1.1
+- Adds dnext-opentmf-639-v4-model (TMF-639 Resource Inventory extensions).
+
+### 1.1.2
+- Documents module boundary rules in the README (common vs TMF-specific; no inter-sibling `dnext-opentmf-*` dependencies) and optional Enforcer guidance.
+
+### 1.1.3
+- Declares `opentmf-product-v4-model` and `opentmf-service-v4-model` on `dnext-opentmf-common-v4-model`; `dnext-opentmf-639-v4-model` depends only on `opentmf-639-v4-model` plus common for those cross-domain types.

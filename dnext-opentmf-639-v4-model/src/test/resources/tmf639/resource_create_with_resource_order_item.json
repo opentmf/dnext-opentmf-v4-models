@@ -1,0 +1,11 @@
+{
+  "id": "rc-1",
+  "href": "https://example.com/tmf-api/resourceInventory/v4/resource/rc-1",
+  "name": "TestResource",
+  "resourceOrderItem": [
+    {
+      "itemId": "oi-1",
+      "resourceOrderId": "ro-1"
+    }
+  ]
+}

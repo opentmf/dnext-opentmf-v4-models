@@ -2,6 +2,8 @@
 
 This artifact holds the shared Dnext extended model classes for the TMF APIs.
 
+It also brings **`opentmf-product-v4-model`** and **`opentmf-service-v4-model`** as compile dependencies so DNext types that reference cross-domain OpenTMF classes (for example `RelatedProductOrderItem` / `RelatedServiceOrderItem` on TMF-639 resource create/update) resolve transitively for any module that depends on this artifact.
+
 ## Usage
 This library is included from any Dnext extended tmf model classes. So, it should not be necessary to define a meven dependency within your project. However, for certain cases, where only the extended shared model classes are enough for your use-case, the following can be performed:
 
@@ -51,3 +53,5 @@ public class JacksonConfig {
 ### 4.0.0.2
 - Appends v4 into module names.
 - Depends on the recent TMF v4 model classes.
+### 4.1.0.11
+- Adds direct dependencies on `opentmf-product-v4-model` and `opentmf-service-v4-model` (aligned with `opentmf-versions`) so TMF extension modules can depend only on their own `opentmf-NNN-v4-model` plus common for those cross-domain types.

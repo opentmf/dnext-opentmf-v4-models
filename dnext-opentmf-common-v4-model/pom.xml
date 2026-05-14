@@ -12,6 +12,8 @@
 
   <properties>
     <opentmf-common-v4-model.version>4.1.0.5</opentmf-common-v4-model.version>
+    <opentmf-product-v4-model.version>4.1.0.5</opentmf-product-v4-model.version>
+    <opentmf-service-v4-model.version>4.1.0.5</opentmf-service-v4-model.version>
   </properties>
 
   <dependencies>
@@ -19,6 +21,16 @@
       <groupId>org.opentmf.model</groupId>
       <artifactId>opentmf-common-v4-model</artifactId>
       <version>${opentmf-common-v4-model.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opentmf.model</groupId>
+      <artifactId>opentmf-product-v4-model</artifactId>
+      <version>${opentmf-product-v4-model.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opentmf.model</groupId>
+      <artifactId>opentmf-service-v4-model</artifactId>
+      <version>${opentmf-service-v4-model.version}</version>
     </dependency>
   </dependencies>
 

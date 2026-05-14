@@ -1,0 +1,22 @@
+{
+  "baseResource": {
+    "id": "br-1",
+    "href": "https://example.com/tmf-api/resourceInventory/v4/resource/br-1",
+    "name": "BulkBase",
+    "resourceOrderItem": [
+      {
+        "itemId": "oi-bulk",
+        "resourceOrderId": "ro-bulk"
+      }
+    ]
+  },
+  "bulkCharacteristic": [
+    {
+      "name": "suffix",
+      "valueFrom": "A",
+      "valueMask": "X",
+      "valueTo": "Z"
+    }
+  ],
+  "itemCount": 2
+}

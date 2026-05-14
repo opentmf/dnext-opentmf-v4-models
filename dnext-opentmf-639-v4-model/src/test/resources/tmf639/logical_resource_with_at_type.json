@@ -1,0 +1,11 @@
+{
+  "id": "lr-1",
+  "href": "https://example.com/tmf-api/resourceInventory/v4/logicalResource/lr-1",
+  "createdBy": "a",
+  "createdDate": "2022-11-30T07:47:21.829Z",
+  "updatedBy": "a",
+  "updatedDate": "2022-11-30T07:47:21.829Z",
+  "revision": 0,
+  "@type": "LogicalResource",
+  "value": "0746712345"
+}

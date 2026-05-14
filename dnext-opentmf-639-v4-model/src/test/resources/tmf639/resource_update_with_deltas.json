@@ -1,0 +1,12 @@
+{
+  "id": "ru-1",
+  "href": "https://example.com/tmf-api/resourceInventory/v4/resource/ru-1",
+  "name": "PatchName",
+  "statusReason": "migrated",
+  "resourceOrderItem": [
+    {
+      "itemId": "oi-2",
+      "resourceOrderId": "ro-2"
+    }
+  ]
+}

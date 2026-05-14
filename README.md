@@ -1,5 +1,25 @@
 # dnext-opentmf-v4-models
 
+> ## ⚠️ Superseded — please migrate
+>
+> This project has been superseded by **`org.opentmf.model:dnext-v4-models`**.
+> All developers are encouraged to switch to `dnext-v4-models` as soon as possible.
+>
+> Differences:
+> - **Generated, not hand-written.** `dnext-v4-models` is a generated project, so it
+>   contains **all** Dnext model classes — not just the subset that was manually
+>   placed in this project.
+> - **Jackson 3.** `dnext-v4-models` registers extensions using Jackson 3, whereas this
+>   project uses Jackson 2. The newer `dnext-v4-models` is therefore intended for
+>   **Spring Boot 4** deployments.
+
+## About this project
+
+This is **not** a generated project. Its classes are hand written by manually
+extending the `opentmf-v4-models` classes. As the Dnext models continue to grow,
+this project would require additional manual updates to keep up — which is one of
+the reasons it has been superseded by the generated `dnext-v4-models`.
+
 Contains the Dnext extended model classes for certain TMF modules.
 
 The project is a multi-module project, that holds the commonly used classes in its dnext-opentmf-common-v4-model module and the corresponding model classes into their own dnext-opentmf-XYZ-model libraries.
@@ -61,42 +81,5 @@ To catch accidental sibling dependencies in CI, add a Maven Enforcer `bannedDepe
   - **Note:** _registerExtensions will be calling the hierarchical registerExtensions methods in the inherited libraries. Hence, calling only one registerExtensions per tmf library is enough._
 
 ## Version History
-### 1.0.0
-- Initial Version
-### 1.0.1
-- Starts Using new TMF-v4 Clients versions
-- Adds new classes to dnext-opentmf-641-v4-models
-### 1.0.2
-- Appends v4 into module names.
-- Depends on the recent TMF v4 model classes.
-### 1.0.3
-- Fixes DNextServiceOrderItem missing Getter Setter
-- Adds orderCharacteristic to DNextServiceOrder
-### 1.0.4
-- Updates to use the new versions of tmf-v4-models v3 and spring-boot 3.4.0
-### 1.0.5
-- Adds dnext-opentmf-633-v4-model service catalog model.
-- Adds cancellationType to DNext's TMF-641 CancelServiceOrder extended classes.
-- Centralize the fulfillmentSpecification extension and remove the obsoleted old format.
-### 1.0.6
-- Adds DNextProductSpecificationCharacteristic and DnextProductSpecificationCharacteristicValueUse classes for dnext-opentmf-620-v4-model.
-- Updates Spring Boot version to 3.4.1
-### 1.0.7
-- Removed is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.
-- Updates Spring Boot version to 3.4.2
-### 1.0.8
-- Fixed removing is from the boolean properties and added jsonProperty for DnextProductSpecificationCharacteristicValueUse and DnextProductSpecificationCharacteristic.
-### 1.0.9
-- Adds DNextProductOffering with the extended field "rules".
-- Updates to Spring Boot 3.4.3
-### 1.1.0
-- The initial open-source version
-- Updates to Spring Boot 3.4.4
-### 1.1.1
-- Adds dnext-opentmf-639-v4-model (TMF-639 Resource Inventory extensions).
 
-### 1.1.2
-- Documents module boundary rules in the README (common vs TMF-specific; no inter-sibling `dnext-opentmf-*` dependencies) and optional Enforcer guidance.
-
-### 1.1.3
-- Declares `opentmf-product-v4-model` and `opentmf-service-v4-model` on `dnext-opentmf-common-v4-model`; `dnext-opentmf-639-v4-model` depends only on `opentmf-639-v4-model` plus common for those cross-domain types.
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
